@@ -6,46 +6,67 @@ Automação de testes utilizando a API de Tarefas<br />
 
 ## Cenários de Teste
 
-**Rota** *Contatos*
+**Rota:** */usuários*
 
-**CN0001-Realizar o cadastro de um novo contato(POST)**
+**CN0001-Cadastrar usuário o parametro administrador igual a true**
 
-Dado o endereço da API para cadastrar um novo contato<br />
-E com os todos os campos do Body preenchidos<br />
-Quando realizar a requisição para cadastrar o contato,
-</br >
-Então a API deve retornar os dados do cadastro e o status **200**
+Dado o endereço da API da rota usuário<br />
+E informar um nome<br />
+E informar um email<br />
+E informar um password<br />
+E informar o parametro administrador true<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem cadastro realizado com sucesso<br />
+E o status code igual a 200
 
-**CN0002-Realizar tentativa de cadastro de um novo contato sem o campo obrigatório name(POST)**
+**CN0002-Cadastrar usuário o parametro administrador igual a false**
 
-Dado o endereço da API para cadastrar um novo contato<br />
-E todos os campos preenchidos exceto o name<br />
-Quando realizar a requisição para cadastrar o contato<br />
-Então a API deve retornar mensagem não pode ficar em branco e o status **422**
+Dado o endereço da API da rota usuário<br />
+E informar um nome<br />
+E informar um email<br />
+E informar um password<br />
+E informar o parametro administrador false<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem cadastro realizado com sucesso<br />
+E o status code igual a 200
 
-**CN0003-Realizar tentativa de cadastro com email já cadastrado na base(POST)**
+**CN0003-Tentativa de cadastro de usuário sem o parametro nome**
 
-Dado o endereço da API para cadastrar um novo contato<br />
-E o campo email preenchido com um já existente em outro cadastro<br />
-Quando realizar a requisição para cadastrar o contato<br />
-Então a API deve retornar mensagem já está em uso e o status **422**
+Dado o endereço da API da rota usuário<br />
+E informar um email<br />
+E informar um password<br />
+E informar o parametro administrador true<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem nome não pode ficar em branco<br />
+E o status code igual a 400
 
-**CN0004-Listar os contatos cadastrados(GET)**
+**CN0004-Tentativa de cadastro de usuário com email já cadastrado na base**
 
-Dado o endereço da API para listar contatos<br />
-Quando realizar a requisição para listar os contatos<br />
-Então a API deve retornar a lista de contatos e o status **200**
+Dado o endereço da API da rota usuário<br />
+E informar um nome<br />
+E informar um email já cadastrado na base<br />
+E informar um password<br />
+E informar o parametro administrador true<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem Este email já está sendo usado<br />
+E o status code igual a 400
 
-**CN0005-Editar um contato existente(PUT)**
+**CN0005-Tentativa de cadastro de usuário sem email**
 
-Dado o endereço da API para editar contato<br />
-E editar os dados de um cliente existente<br />
-Quando realizar a requisição para editar contato existente<br />
-Então a API deve retornar o status **200**
+Dado o endereço da API da rota usuário<br />
+E informar um nome<br />
+E informar um password<br />
+E informar o parametro administrador true<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem email não pode ficar em branco<br />
+E o status code igual a 400
 
-**CN0006-Editar um contato inexistente(PUT)**
+**CN0006-Tentativa de cadastro sem parametro administrador**
 
-Dado o endereço da API para editar contato<br />
-E editar os dados de um cliente existente<br />
-Quando realizar a requisição para editar contato existente<br />
-Então a API deve retornar o status **404**
+Dado o endereço da API da rota usuário<br />
+E informar um nome<br />
+E informar um email<br />
+E informar um password<br />
+Quando realizar a requisição da rota para criar usuário<br />
+Então deve retornar a mensagem administrador deve ser 'true' ou 'false'<br />
+E o status code igual a 400
