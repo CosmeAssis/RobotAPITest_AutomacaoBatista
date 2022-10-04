@@ -35,3 +35,17 @@ Então a API deve retornar mensagem já está em uso e o status **422**
 Dado o endereço da API para listar contatos<br />
 Quando realizar a requisição para listar os contatos<br />
 Então a API deve retornar a lista de contatos e o status **200**
+
+**CN0005-Editar um contato existente(PUT)**
+
+Dado o endereço da API para editar contato<br />
+E editar os dados de um cliente existente<br />
+Quando realizar a requisição para editar contato existente<br />
+Então a API deve retornar o status **200**
+
+**CN0006-Editar um contato inexistente(PUT)**
+
+Dado o endereço da API para editar contato<br />
+E editar os dados de um cliente existente<br />
+Quando realizar a requisição para editar contato existente<br />
+Então a API deve retornar o status **404**
