@@ -1,3 +1,4 @@
 *** Settings ***
+Library    FakerLibrary
 
 *** Keywords ***
