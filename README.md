@@ -1,12 +1,12 @@
 # RobotAPITest_AutomacaoBatista
 
-Automação de testes utilizando a API de Tarefas<br />
-**Documentação:** https://apidetarefas.docs.apiary.io/#reference<br />
-**Endpoint:** https://api-de-tarefas.herokuapp.com/
+Automação de testes utilizando a API ServerRest<br />
+**Documentação:** https://serverest.dev/#/<br />
+**Endpoint:** https://serverest.dev/
 
 ## Cenários de Teste
 
-**Rota:** */usuários*
+### **Rota:** */usuários*
 
 **CN0001-Cadastrar usuário o parametro administrador igual a true**
 
