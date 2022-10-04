@@ -1,9 +1,13 @@
 # RobotAPITest_AutomacaoBatista
 
 Automação de testes utilizando a API de Tarefas<br />
-Documentação: https://apidetarefas.docs.apiary.io/#reference
+**Documentação:** https://apidetarefas.docs.apiary.io/#reference<br />
+**Endpoint:** https://api-de-tarefas.herokuapp.com/
 
 ## Cenários de Teste
+
+**Rota** *Contatos*
+
 **CN0001-Realizar o cadastro de um novo contato(POST)**
 
 Dado o endereço da API para cadastrar um novo contato<br />
