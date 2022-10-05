@@ -1,5 +1,4 @@
 *** Settings ***
-Library    FakerLibrary
 Library    RequestsLibrary
 Resource   ./variables/TestAPI_variables.robot
 
