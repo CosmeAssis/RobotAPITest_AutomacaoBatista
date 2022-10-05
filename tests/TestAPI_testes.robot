@@ -1,5 +1,6 @@
 *** Settings ***
-Resource    ../TestAPI_ResourceBase.robot
+Resource    ../resources/TestAPI_ResourceBase.robot
+Resource    ../resources/rotas/Usuários_resource.robot
 
 *** Variables ***
 ${URL_API}    https://serverest.dev/
