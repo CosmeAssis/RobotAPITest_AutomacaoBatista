@@ -1,6 +1,9 @@
 *** Settings ***
 Resource    ../TestAPI_ResourceBase.robot
 
+*** Variables ***
+${URL_API}    https://serverest.dev/
+
 *** Test Cases ***
 CN0001-Cadastrar usuário o parametro administrador igual a true
     [Tags]    cadastrar_usuario_admistradorTrue

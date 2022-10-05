@@ -1,9 +1,7 @@
 *** Settings ***
 Library    FakerLibrary
 Library    RequestsLibrary
-
-*** Variables ***
-${URL_API}    https://serverest.dev/
+Resource   ./variables/TestAPI_variables.robot
 
 *** Keywords ***
 Dado o endpoint da API

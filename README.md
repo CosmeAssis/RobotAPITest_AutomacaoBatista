@@ -6,7 +6,9 @@ Automação de testes utilizando a API ServerRest<br />
 
 ## Cenários de Teste
 
-### **Rota:** */usuários*
+### **Rota:** /usuários
+
+#### Cenários referente a API para cadastrar usuário
 
 **CN0001-Cadastrar usuário o parametro administrador igual a true**
 
