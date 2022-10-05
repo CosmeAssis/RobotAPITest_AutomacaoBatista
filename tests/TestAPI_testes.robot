@@ -1,9 +1,10 @@
 *** Settings ***
+Resource    ../TestAPI_ResourceBase.robot
 
 *** Test Cases ***
 CN0001-Cadastrar usuário o parametro administrador igual a true
     [Tags]    cadastrar_usuario_admistradorTrue
-    Dado o endereço da API da rota usuário
+    Dado o endpoint da API
     E informar um nome
     E informar um email
     E informar um password
