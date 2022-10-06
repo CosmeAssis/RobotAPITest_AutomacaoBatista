@@ -21,6 +21,6 @@ E informar o parametro administrador true
 
 Quando realizar a requisição da rota para criar usuário
     ${RESPOSTA}    POST On Session    serverestAPI   usuarios
-    ...    data={"nome":"${USUARIOS_NOME}"}
+    ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}"}
     ...    headers=${HEADER_1}
     Log    ${RESPOSTA.text}
