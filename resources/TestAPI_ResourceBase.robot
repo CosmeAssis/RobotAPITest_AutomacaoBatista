@@ -1,6 +1,9 @@
 *** Settings ***
 Library    RequestsLibrary
 
+*** Variables ***
+${URL_API}    https://serverest.dev/
+
 *** Keywords ***
 Dado o endpoint da API
     Create Session    serverestAPI    ${URL_API}
