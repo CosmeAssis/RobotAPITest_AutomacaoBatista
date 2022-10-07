@@ -1,3 +1,5 @@
 ['email: benjaminduarte@example.org - nome: Amanda Farias - password: U52cMgxJ@$ - id: taVzpoT8vPRE6HiR']
 ['email: maria-luiza21@example.net - nome: Thales Correia - password: (0hVQuk^bv - id: gJGVfdEUh4zImXYZ']
 ['email: luiz-henriquedas-neves@example.net - nome: Clara Silva - password: (724G(yr@i - id: RnYXKp0iJRRgdQYr']
+['email: diogo13@example.org - nome: Sr. Thomas Barros - password: +uHTgG@o3$ - id: M2vYd4ZFw3vhmb6x']
+['email: lorenzo85@example.org - nome: Pietro das Neves - password: dcfb7Nao(& - id: pMbfEVBhgaPuVBuH - administrador: false']
