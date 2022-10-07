@@ -42,6 +42,6 @@ CN0004-Tentativa de cadastro de usuário com email já cadastrado na base
     E informar um email já cadastrado na base
     E informar um password
     E informar o parametro administrador true
-    Quando realizar a requisição da rota para criar usuário
+    Quando realizar a requisição da rota para criar usuário com email já cadastrado
     Então deve retornar a mensagem Este email já está sendo usado
     E o status code igual a 400    
