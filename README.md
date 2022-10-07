@@ -38,7 +38,7 @@ Dado o endpoint da API<br />
 E informar um email<br />
 E informar um password<br />
 E informar o parametro administrador true<br />
-Quando realizar a requisição da rota para criar usuário<br />
+Quando realizar a requisição da rota para criar usuário sem o parametro nome<br />
 Então deve retornar a mensagem nome não pode ficar em branco<br />
 E o status code igual a 400
 
