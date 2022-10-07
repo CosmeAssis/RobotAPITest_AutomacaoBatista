@@ -49,7 +49,7 @@ E informar um nome<br />
 E informar um email já cadastrado na base<br />
 E informar um password<br />
 E informar o parametro administrador true<br />
-Quando realizar a requisição da rota para criar usuário<br />
+Quando realizar a requisição da rota para criar usuário com email já cadastrado<br />
 Então deve retornar a mensagem Este email já está sendo usado<br />
 E o status code igual a 400
 

@@ -34,3 +34,14 @@ CN0003-Tentativa de cadastro de usuário sem o parametro nome
     Quando realizar a requisição da rota para criar usuário sem o parametro nome
     Então deve retornar a mensagem nome não pode ficar em branco
     E o status code igual a 400
+
+CN0004-Tentativa de cadastro de usuário com email já cadastrado na base
+    [Tags]    tentativa_cadastroUsuario_EmailCadastrado
+    Dado o endpoint da API
+    E informar um nome
+    E informar um email já cadastrado na base
+    E informar um password
+    E informar o parametro administrador true
+    Quando realizar a requisição da rota para criar usuário com email já cadastrado
+    Então deve retornar a mensagem Este email já está sendo usado
+    E o status code igual a 400    
