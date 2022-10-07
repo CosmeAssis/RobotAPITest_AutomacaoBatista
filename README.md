@@ -30,7 +30,7 @@ E informar um password<br />
 E informar o parametro administrador false<br />
 Quando realizar a requisição da rota para criar usuário<br />
 Então deve retornar a mensagem cadastro realizado com sucesso<br />
-E o status code igual a 200
+E o status code igual a 201
 
 **CN0003-Tentativa de cadastro de usuário sem o parametro nome**
 

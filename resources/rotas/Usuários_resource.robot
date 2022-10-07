@@ -34,5 +34,5 @@ Então deve retornar a mensagem ${CADASTRO_REALIZADO_SUCESSO}
 E o status code igual a ${STATUS_CODE}
     Status Should Be    ${STATUS_CODE}
     Log    "Status Code:"${RESPOSTA.status_code}
-    @{FILE_RESPONSE}    Create List    email: ${USUARIOS_EMAIL} - nome: ${USUARIOS_NOME} - password: ${USUARIOS_PASSW} - id: ${RESPOSTA.json()['_id']}
+    @{FILE_RESPONSE}    Create List    email: ${USUARIOS_EMAIL} - nome: ${USUARIOS_NOME} - password: ${USUARIOS_PASSW} - id: ${RESPOSTA.json()['_id']} - administrador: ${ADMINSTRADOR}
     Append To File    ${EXECDIR}/responses/response.txt   @{FILE_RESPONSE}\n
