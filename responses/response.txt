@@ -1,2 +1,3 @@
 ['email: benjaminduarte@example.org - nome: Amanda Farias - password: U52cMgxJ@$ - id: taVzpoT8vPRE6HiR']
 ['email: maria-luiza21@example.net - nome: Thales Correia - password: (0hVQuk^bv - id: gJGVfdEUh4zImXYZ']
+['email: luiz-henriquedas-neves@example.net - nome: Clara Silva - password: (724G(yr@i - id: RnYXKp0iJRRgdQYr']
