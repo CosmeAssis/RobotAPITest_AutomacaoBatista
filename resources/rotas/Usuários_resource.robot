@@ -1,6 +1,7 @@
 *** Settings ***
 Library    FakerLibrary    locale=pt_BR
 Library    String
+Library    Collections
 Resource   ../TestAPI_ResourceBase.robot
 
 *** Keywords ***
@@ -23,4 +24,7 @@ Quando realizar a requisição da rota para criar usuário
     ${RESPOSTA}    POST On Session    serverestAPI   usuarios
     ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}","password":"${USUARIOS_PASSW}","administrador":"${ADMINSTRADOR}"}
     ...    headers=${HEADER_1}
-    Log    ${RESPOSTA.text}
+    Set Global Variable     ${RESPOSTA}
+
+Então deve retornar a mensagem ${CADASTRO_REALIZADO_SUCESSO}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    message    ${CADASTRO_REALIZADO_SUCESSO}
