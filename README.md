@@ -19,7 +19,7 @@ E informar um password<br />
 E informar o parametro administrador true<br />
 Quando realizar a requisição da rota para criar usuário<br />
 Então deve retornar a mensagem cadastro realizado com sucesso<br />
-E o status code igual a 200
+E o status code igual a 201
 
 **CN0002-Cadastrar usuário o parametro administrador igual a false**
 

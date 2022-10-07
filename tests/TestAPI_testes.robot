@@ -15,4 +15,4 @@ CN0001-Cadastrar usuário o parametro administrador igual a true
     E informar o parametro administrador true
     Quando realizar a requisição da rota para criar usuário
     Então deve retornar a mensagem Cadastro realizado com sucesso
-    E o status code igual a 200
+    E o status code igual a 201

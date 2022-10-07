@@ -28,3 +28,8 @@ Quando realizar a requisição da rota para criar usuário
 
 Então deve retornar a mensagem ${CADASTRO_REALIZADO_SUCESSO}
     Dictionary Should Contain Item    ${RESPOSTA.json()}    message    ${CADASTRO_REALIZADO_SUCESSO}
+    Log    ${RESPOSTA.content}
+
+E o status code igual a ${STATUS_CODE}
+    Status Should Be    ${STATUS_CODE}
+    Log    "Status Code:"${RESPOSTA.status_code}
