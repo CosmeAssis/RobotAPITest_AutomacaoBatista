@@ -1,5 +1,6 @@
 *** Settings ***
 Library    FakerLibrary    locale=pt_BR
+Library    String
 Resource   ../TestAPI_ResourceBase.robot
 
 *** Keywords ***
@@ -15,12 +16,11 @@ E informar um password
     ${USUARIOS_PASSW}        FakerLibrary.Password
     Set Global Variable      ${USUARIOS_PASSW}
 
-E informar o parametro administrador true
-    ${USUARIOS_ADMINISTRADOR}    FakerLibrary.Boolean
-    Set Global Variable          ${USUARIOS_ADMINISTRADOR}
+E informar o parametro administrador ${ADMINSTRADOR}
+    Set Global Variable    ${ADMINSTRADOR}
 
 Quando realizar a requisição da rota para criar usuário
     ${RESPOSTA}    POST On Session    serverestAPI   usuarios
-    ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}"}
+    ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}","password":"${USUARIOS_PASSW}","administrador":"${ADMINSTRADOR}"}
     ...    headers=${HEADER_1}
     Log    ${RESPOSTA.text}
