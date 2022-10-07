@@ -2,8 +2,6 @@
 Resource    ../resources/TestAPI_ResourceBase.robot
 Resource    ../resources/rotas/Usuários_resource.robot
 
-*** Variables ***
-
 *** Test Cases ***
 CN0001-Cadastrar usuário o parametro administrador igual a true
     [Tags]    cadastrar_usuario_admistradorTrue
