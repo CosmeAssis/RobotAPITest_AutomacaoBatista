@@ -72,6 +72,12 @@ Quando realizar a requisição da rota para criar usuário com parametro email v
     ...    headers=${HEADER_1}
     Set Global Variable     ${RESPOSTA} 
 
+Quando realizar a requisição da rota para criar usuário com parametro administrador vazio
+    ${RESPOSTA}    POST On Session    serverestAPI   usuarios    expected_status=400
+    ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}","password":"${USUARIOS_PASSW}","administrador":""}
+    ...    headers=${HEADER_1}
+    Set Global Variable     ${RESPOSTA}  
+
 E informar um email já cadastrado na base
     Set Global Variable    ${EMAIL_EXISTENTE_RESQUEST}
 
