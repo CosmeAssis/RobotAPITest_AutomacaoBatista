@@ -72,3 +72,15 @@ E informar um password<br />
 Quando realizar a requisição da rota para criar usuário com parametro administrador vazio<br />
 Então deve retornar a mensagem administrador deve ser 'true' ou 'false'<br />
 E o status code igual a 400
+
+**CN0007-Buscar usuário com ID existente**
+
+Dado o endpoint da API<br />
+Quando realizar a requisição da rota para buscar usuário por ID existente<br />
+Então deve retornar o body da request com os dados de cadastro do usuário<br />
+
+**CN0008-Buscar usuário com ID inexistente**
+
+Dado o endpoint da API<br />
+Quando realizar a requisição da rota para buscar usuário por ID inexistente<br />
+Então deve retorna uma mensagem Usuário não encontrado<br />
