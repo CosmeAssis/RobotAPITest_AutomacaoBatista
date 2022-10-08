@@ -6,11 +6,12 @@ Library    OperatingSystem
 Resource   ../TestAPI_ResourceBase.robot
 
 *** Variables ***
-${RESPONSE_CADASTRO_SUCESSO}    Cadastro realizado com sucesso
-${RESPONSE_NOME_BRANCO}         nome não pode ficar em branco
-${EMAIL_EXISTENTE_RESQUEST}     araujoluigi@example.com
-${RESPONSE_EMAIL_EM_USO}        Este email já está sendo usado
-${RESPONSE_EMAIL_EM_BRANCO}     email não pode ficar em branco
+${RESPONSE_CADASTRO_SUCESSO}        Cadastro realizado com sucesso
+${RESPONSE_NOME_BRANCO}             nome não pode ficar em branco
+${EMAIL_EXISTENTE_RESQUEST}         araujoluigi@example.com
+${RESPONSE_EMAIL_EM_USO}            Este email já está sendo usado
+${RESPONSE_EMAIL_EM_BRANCO}         email não pode ficar em branco
+${RESPONSE_ADMINISTRADOR_VAZIO}     administrador deve ser 'true' ou 'false'
 
 *** Keywords ***
 E informar um nome
@@ -89,6 +90,6 @@ Então deve retornar a mensagem email não pode ficar em branco
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}    email    ${RESPONSE_EMAIL_EM_BRANCO}
 
-Então deve retornar a mensagem ${RESPONSE_ADMINISTRADOR_VAZIO}
+Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}

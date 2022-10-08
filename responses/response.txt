@@ -34,3 +34,7 @@
 ['email: cardosocalebe@example.net - nome: Mariana Azevedo - password: 1fHYHwKyCe - id: RlYJywZJuaU2ILqJ - administrador: false']
 ['email: cpeixoto@example.com - nome: Davi Lucas da Paz - password: 1IxcUM79Ic - id: BlnwPydwOWk7fOmU - administrador: true']
 ['email: jpereira@example.net - nome: Dra. Daniela Araújo - password: 47QocKZw4y - id: 6FgL7Htap5X0qPdM - administrador: false']
+['email: maria-luiza94@example.net - nome: Nicolas Silva - password: h1EjpELT2q - id: 6jJIU7YwiCn4C5Fx - administrador: true']
+['email: vitor-hugobarbosa@example.com - nome: Sr. Calebe Cardoso - password: sA1zJdiUAU - id: BETf8ydUHKMF1tVc - administrador: false']
+['email: da-pazpedro-henrique@example.net - nome: Ana Costela - password: R4BZxvaw5j - id: u4B8UEr5yeF2vaWT - administrador: true']
+['email: azevedopedro-lucas@example.com - nome: Vicente Campos - password: EuJqvyTkZ5 - id: EmibRrlEKpEkZmmp - administrador: false']
