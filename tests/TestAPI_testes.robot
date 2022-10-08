@@ -55,3 +55,13 @@ CN0005-Tentativa de cadastro de usuário sem email
     Quando realizar a requisição da rota para criar usuário com parametro email vazio
     Então deve retornar a mensagem email não pode ficar em branco
     E o status code igual a 400
+
+CN0006-Tentativa de cadastro sem parametro administrador
+    [Tags]    tentativa_cadastroUsuario_SemAdministrador
+    Dado o endpoint da API
+    E informar um nome
+    E informar um email
+    E informar um password
+    Quando realizar a requisição da rota para criar usuário com parametro administrador vazio
+    Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
+    E o status code igual a 400

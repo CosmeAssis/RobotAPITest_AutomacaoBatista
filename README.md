@@ -69,6 +69,6 @@ Dado o endpoint da API<br />
 E informar um nome<br />
 E informar um email<br />
 E informar um password<br />
-Quando realizar a requisição da rota para criar usuário<br />
+Quando realizar a requisição da rota para criar usuário com parametro administrador vazio<br />
 Então deve retornar a mensagem administrador deve ser 'true' ou 'false'<br />
 E o status code igual a 400

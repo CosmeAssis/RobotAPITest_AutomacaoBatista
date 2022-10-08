@@ -6,11 +6,12 @@ Library    OperatingSystem
 Resource   ../TestAPI_ResourceBase.robot
 
 *** Variables ***
-${RESPONSE_CADASTRO_SUCESSO}    Cadastro realizado com sucesso
-${RESPONSE_NOME_BRANCO}         nome não pode ficar em branco
-${EMAIL_EXISTENTE_RESQUEST}     araujoluigi@example.com
-${RESPONSE_EMAIL_EM_USO}        Este email já está sendo usado
-${RESPONSE_EMAIL_EM_BRANCO}     email não pode ficar em branco
+${RESPONSE_CADASTRO_SUCESSO}        Cadastro realizado com sucesso
+${RESPONSE_NOME_BRANCO}             nome não pode ficar em branco
+${EMAIL_EXISTENTE_RESQUEST}         araujoluigi@example.com
+${RESPONSE_EMAIL_EM_USO}            Este email já está sendo usado
+${RESPONSE_EMAIL_EM_BRANCO}         email não pode ficar em branco
+${RESPONSE_ADMINISTRADOR_VAZIO}     administrador deve ser 'true' ou 'false'
 
 *** Keywords ***
 E informar um nome
@@ -72,6 +73,12 @@ Quando realizar a requisição da rota para criar usuário com parametro email v
     ...    headers=${HEADER_1}
     Set Global Variable     ${RESPOSTA} 
 
+Quando realizar a requisição da rota para criar usuário com parametro administrador vazio
+    ${RESPOSTA}    POST On Session    serverestAPI   usuarios    expected_status=400
+    ...    data={"nome":"${USUARIOS_NOME}","email":"${USUARIOS_EMAIL}","password":"${USUARIOS_PASSW}","administrador":""}
+    ...    headers=${HEADER_1}
+    Set Global Variable     ${RESPOSTA}  
+
 E informar um email já cadastrado na base
     Set Global Variable    ${EMAIL_EXISTENTE_RESQUEST}
 
@@ -82,3 +89,7 @@ Então deve retornar a mensagem Este email já está sendo usado
 Então deve retornar a mensagem email não pode ficar em branco
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}    email    ${RESPONSE_EMAIL_EM_BRANCO}
+
+Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
+    Log    ${RESPOSTA.content}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}
