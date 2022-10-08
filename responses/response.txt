@@ -20,3 +20,5 @@
 ['email: martinsisabelly@example.net - nome: Felipe Sales - password: 5HQ2KUjjMh - id: QTDC0c5GagftG9jM - administrador: false']
 ['email: giovannada-mata@example.org - nome: Camila Azevedo - password: IKt6fWwg1s - id: c4sxm38POeVsr3Nt - administrador: true']
 ['email: yvieira@example.org - nome: Luigi Costa - password: 8UpFYzJRlB - id: whxU7WlEB37LC5lw - administrador: false']
+['email: bianca61@example.net - nome: Agatha da Paz - password: gH9hr0go3D - id: nNJwvKMPqUMWwWpJ - administrador: true']
+['email: marianaribeiro@example.com - nome: Maria Eduarda Cavalcanti - password: fMXIodwzi5 - id: N99jqFMay5Gih5Xb - administrador: false']
