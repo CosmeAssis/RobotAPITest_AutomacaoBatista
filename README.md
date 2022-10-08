@@ -73,6 +73,10 @@ Quando realizar a requisição da rota para criar usuário com parametro adminis
 Então deve retornar a mensagem administrador deve ser 'true' ou 'false'<br />
 E o status code igual a 400
 
+### **Rota:** /usuários/{_id}
+
+#### Cenários referente a API para buscar usuário por ID
+
 **CN0007-Buscar usuário com ID existente**
 
 Dado o endpoint da API<br />
