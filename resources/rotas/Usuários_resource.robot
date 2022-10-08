@@ -96,3 +96,6 @@ Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}
 
+Quando realizar a requisição da rota para buscar usuário por ID existente
+    ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${_ID}
+    Set Global Variable    ${RESPOSTA}
