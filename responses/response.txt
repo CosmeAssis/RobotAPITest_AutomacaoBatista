@@ -62,3 +62,5 @@
 ['email: rebeca45@example.net - nome: Sr. Arthur Fernandes - password: 8BOSlacEml - id: xtIm0HfQjL780eWW - administrador: false']
 ['email: enrico55@example.org - nome: Helena da Cruz - password: wCIwosi33j - id: jE1JxPiOyXoQYkm5 - administrador: true']
 ['email: wrodrigues@example.com - nome: Lívia Fernandes - password: uYMm3rrj7Y - id: bF6Y5w3nB4nqzoCt - administrador: false']
+['email: alicia09@example.org - nome: Marina Cavalcanti - password: 8S6Glkc7C2 - id: 9b9Iahw1g1L5kNds - administrador: true']
+['email: lcostela@example.net - nome: Nina Pires - password: 5Iek7vI74F - id: DsWp89jjNFnHIdhu - administrador: false']

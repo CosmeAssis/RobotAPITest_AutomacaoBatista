@@ -99,3 +99,6 @@ Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
 Quando realizar a requisição da rota para buscar usuário por ID existente
     ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${_ID}
     Set Global Variable    ${RESPOSTA}
+
+Então deve retornar o body da request com os dados de cadastro do usuário
+    Log    ${RESPOSTA.content}
