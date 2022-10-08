@@ -88,3 +88,7 @@ Então deve retornar a mensagem Este email já está sendo usado
 Então deve retornar a mensagem email não pode ficar em branco
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}    email    ${RESPONSE_EMAIL_EM_BRANCO}
+
+Então deve retornar a mensagem ${RESPONSE_ADMINISTRADOR_VAZIO}
+    Log    ${RESPOSTA.content}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}
