@@ -59,7 +59,7 @@ Dado o endpoint da API<br />
 E informar um nome<br />
 E informar um password<br />
 E informar o parametro administrador true<br />
-Quando realizar a requisição da rota para criar usuário<br />
+Quando realizar a requisição da rota para criar usuário com parametro email vazio<br />
 Então deve retornar a mensagem email não pode ficar em branco<br />
 E o status code igual a 400
 

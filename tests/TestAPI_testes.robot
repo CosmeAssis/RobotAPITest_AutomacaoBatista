@@ -52,6 +52,6 @@ CN0005-Tentativa de cadastro de usuário sem email
     E informar um nome
     E informar um password
     E informar o parametro administrador true
-    Quando realizar a requisição da rota para criar usuário
+    Quando realizar a requisição da rota para criar usuário com parametro email vazio
     Então deve retornar a mensagem email não pode ficar em branco
     E o status code igual a 400
