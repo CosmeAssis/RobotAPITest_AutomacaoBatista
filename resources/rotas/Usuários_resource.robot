@@ -10,6 +10,7 @@ ${RESPONSE_CADASTRO_SUCESSO}    Cadastro realizado com sucesso
 ${RESPONSE_NOME_BRANCO}         nome não pode ficar em branco
 ${EMAIL_EXISTENTE_RESQUEST}     araujoluigi@example.com
 ${RESPONSE_EMAIL_EM_USO}        Este email já está sendo usado
+${RESPONSE_EMAIL_EM_BRANCO}     email não pode ficar em branco
 
 *** Keywords ***
 E informar um nome
@@ -77,3 +78,7 @@ E informar um email já cadastrado na base
 Então deve retornar a mensagem Este email já está sendo usado
     Log    ${RESPOSTA.content} 
     Dictionary Should Contain Item    ${RESPOSTA.json()}    message    ${RESPONSE_EMAIL_EM_USO}
+
+Então deve retornar a mensagem email não pode ficar em branco
+    Log    ${RESPOSTA.content}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}    email    ${RESPONSE_EMAIL_EM_BRANCO}
