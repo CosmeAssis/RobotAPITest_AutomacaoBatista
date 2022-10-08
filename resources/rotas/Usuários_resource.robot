@@ -8,7 +8,7 @@ Resource   ../TestAPI_ResourceBase.robot
 *** Variables ***
 ${RESPONSE_CADASTRO_SUCESSO}        Cadastro realizado com sucesso
 ${RESPONSE_NOME_BRANCO}             nome não pode ficar em branco
-${EMAIL_EXISTENTE_RESQUEST}         araujoluigi@example.com
+${EMAIL_EXISTENTE_RESQUEST}         azevedopedro-lucas@example.com
 ${RESPONSE_EMAIL_EM_USO}            Este email já está sendo usado
 ${RESPONSE_EMAIL_EM_BRANCO}         email não pode ficar em branco
 ${RESPONSE_ADMINISTRADOR_VAZIO}     administrador deve ser 'true' ou 'false'
@@ -37,7 +37,9 @@ Quando realizar a requisição da rota para criar usuário
 
 Então deve retornar a mensagem Cadastro realizado com sucesso
     Dictionary Should Contain Item    ${RESPOSTA.json()}    message    ${RESPONSE_CADASTRO_SUCESSO}
-    Log    ${RESPOSTA.content}
+    ${PAYLOAD}    Set Variable    ${RESPOSTA.json()}
+    ${_ID}      Set Variable    ${PAYLOAD['_id']}   
+    Set Global Variable    ${_ID} 
 
 Então deve retornar a mensagem nome não pode ficar em branco
     Dictionary Should Contain Item    ${RESPOSTA.json()}    nome    ${RESPONSE_NOME_BRANCO}
@@ -93,3 +95,4 @@ Então deve retornar a mensagem email não pode ficar em branco
 Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}
+
