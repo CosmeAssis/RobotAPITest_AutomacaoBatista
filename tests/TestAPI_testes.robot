@@ -65,3 +65,9 @@ CN0006-Tentativa de cadastro sem parametro administrador
     Quando realizar a requisição da rota para criar usuário com parametro administrador vazio
     Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
     E o status code igual a 400
+
+CN0007-Buscar usuário com ID existente
+    [Tags]    buscar_Usuario_ID_Existente
+    Dado o endpoint da API
+    Quando realizar a requisição da rota para buscar usuário por ID existente
+    Então deve retornar o body da request com os dados de cadastro do usuário
