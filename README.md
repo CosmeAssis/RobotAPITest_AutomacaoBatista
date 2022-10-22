@@ -1,6 +1,4 @@
-# RobotAPITest_AutomacaoBatista
-
-Automação de testes utilizando a API ServerRest<br />
+# Automação da API ServerRest utilizando Robot Framework<br />
 **Documentação:** https://serverest.dev/#/<br />
 **Endpoint:** https://serverest.dev/
 
