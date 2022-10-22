@@ -105,8 +105,9 @@ Então deve retorna uma mensagem Usuário não encontrado
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}  message    ${RESPONSE_USUARIO_INEXISTENTE}
 
-Então deve retornar a mensagem Registro excluído com sucesso
-    
+Então deve retornar a mensagem ${RESPONSE_USUARIO_EXCLUIDO}
+    Log    ${RESPOSTA.content}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}  message    ${RESPONSE_USUARIO_EXCLUIDO}
 
 Quando realizar a requisição da rota para buscar usuário por ID existente
     ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${_ID}
