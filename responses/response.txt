@@ -74,3 +74,7 @@
 ['email: augustoda-rosa@example.net - nome: Yasmin Azevedo - password: 1QBRoDf3AB - id: 2ARRDs4UWJFGCKUy - administrador: false']
 ['email: emelo@example.net - nome: Luiz Gustavo Peixoto - password: 2CWR9lDqAN - id: Fn5mMqpEYeA3cBZg - administrador: true']
 ['email: ida-conceicao@example.com - nome: Calebe Ferreira - password: k8qIrMtuBJ - id: 8QmLe9PjkPUNagTt - administrador: false']
+['email: alvesvalentina@example.org - nome: Ana Sophia Santos - password: r2QyRPp8Ea - id: 6tarqK92LDCflBGf - administrador: true']
+['email: melissa51@example.org - nome: Gabriela Sales - password: w307aLwVY3 - id: BZYDw67xFL0mJsfk - administrador: false']
+['email: srezende@example.org - nome: Sr. Caio Caldeira - password: HSxUqZsF1R - id: pUTB9U3kIJmZJybl - administrador: true']
+['email: anthonylopes@example.com - nome: Enzo Gabriel Sales - password: 2Cu4S1c5Yi - id: TfyqPd7Uf6E6ucDB - administrador: false']
