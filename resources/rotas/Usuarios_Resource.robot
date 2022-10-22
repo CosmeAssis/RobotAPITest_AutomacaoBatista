@@ -12,6 +12,7 @@ ${EMAIL_EXISTENTE_RESQUEST}         azevedopedro-lucas@example.com
 ${RESPONSE_EMAIL_EM_USO}            Este email já está sendo usado
 ${RESPONSE_EMAIL_EM_BRANCO}         email não pode ficar em branco
 ${RESPONSE_ADMINISTRADOR_VAZIO}     administrador deve ser 'true' ou 'false'
+${PARAMS_ID_USUARIO_INEXISTENTE}    ud187371635ac
 
 *** Keywords ***
 E informar um nome
@@ -96,9 +97,12 @@ Então deve retornar a mensagem administrador deve ser 'true' ou 'false'
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}   administrador    ${RESPONSE_ADMINISTRADOR_VAZIO}
 
+Então deve retornar o body da request com os dados de cadastro do usuário
+    Log    ${RESPOSTA.content}
+
+Então deve retorna uma mensagem Usuário não encontrado
+
 Quando realizar a requisição da rota para buscar usuário por ID existente
     ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${_ID}
     Set Global Variable    ${RESPOSTA}
-
-Então deve retornar o body da request com os dados de cadastro do usuário
-    Log    ${RESPOSTA.content}
+Quando realizar a requisição da rota para buscar usuário por ID inexistente

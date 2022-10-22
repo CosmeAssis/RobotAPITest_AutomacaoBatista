@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../Resources/TestAPI_ResourceBase.robot
+Resource    ../Resources/Main.robot
 Resource    ../Resources/rotas/Usuarios_Resource.robot
 
 *** Test Cases ***
