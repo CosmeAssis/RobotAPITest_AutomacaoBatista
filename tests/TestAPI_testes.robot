@@ -71,3 +71,9 @@ CN0007-Buscar usuário com ID existente
     Dado o endpoint da API
     Quando realizar a requisição da rota para buscar usuário por ID existente
     Então deve retornar o body da request com os dados de cadastro do usuário
+
+CN0008-Buscar usuário com ID inexistente
+
+    Dado o endpoint da API
+    Quando realizar a requisição da rota para buscar usuário por ID inexistente
+    Então deve retorna uma mensagem Usuário não encontrado
