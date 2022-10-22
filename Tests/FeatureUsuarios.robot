@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../resources/TestAPI_ResourceBase.robot
-Resource    ../resources/rotas/Usuários_resource.robot
+Resource    ../Resources/Main.robot
+Resource    ../Resources/rotas/Usuarios_Resource.robot
 
 *** Test Cases ***
 CN0001-Cadastrar usuário o parametro administrador igual a true
@@ -71,3 +71,9 @@ CN0007-Buscar usuário com ID existente
     Dado o endpoint da API
     Quando realizar a requisição da rota para buscar usuário por ID existente
     Então deve retornar o body da request com os dados de cadastro do usuário
+
+CN0008-Buscar usuário com ID inexistente
+    [Tags]    buscar_Usuario_ID_Inexistente
+    Dado o endpoint da API
+    Quando realizar a requisição da rota para buscar usuário por ID inexistente
+    Então deve retorna uma mensagem Usuário não encontrado
