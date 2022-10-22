@@ -73,7 +73,7 @@ CN0007-Buscar usuário com ID existente
     Então deve retornar o body da request com os dados de cadastro do usuário
 
 CN0008-Buscar usuário com ID inexistente
-
+    [Tags]    buscar_Usuario_ID_Inexistente
     Dado o endpoint da API
     Quando realizar a requisição da rota para buscar usuário por ID inexistente
     Então deve retorna uma mensagem Usuário não encontrado
