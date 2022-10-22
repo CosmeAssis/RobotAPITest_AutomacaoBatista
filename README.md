@@ -88,3 +88,15 @@ Então deve retornar o body da request com os dados de cadastro do usuário<br /
 Dado o endpoint da API<br />
 Quando realizar a requisição da rota para buscar usuário por ID inexistente<br />
 Então deve retorna uma mensagem Usuário não encontrado<br />
+
+**CN0009-Excluir usuário existente**
+
+Dado o endpoint da API<br />
+Quando realizar a requisição da rota para excluir um usuário existente<br />
+Então deve retornar a mensagem Registro excluído com sucesso
+
+**CN0010-Tentativa de exclusão de usuário inexistente**
+
+Dado o endpoint da API<br />
+Quando realizar a requisição da rota para excluir um usuário inexistente<br />
+Então deve retornar a mensagem Nenhum registro excluído
