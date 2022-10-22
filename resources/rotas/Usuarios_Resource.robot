@@ -105,9 +105,21 @@ Então deve retorna uma mensagem Usuário não encontrado
     Log    ${RESPOSTA.content}
     Dictionary Should Contain Item    ${RESPOSTA.json()}  message    ${RESPONSE_USUARIO_INEXISTENTE}
 
+Então deve retornar a mensagem ${RESPONSE_USUARIO_EXCLUIDO}
+    Log    ${RESPOSTA.content}
+    Dictionary Should Contain Item    ${RESPOSTA.json()}  message    ${RESPONSE_USUARIO_EXCLUIDO}
+
 Quando realizar a requisição da rota para buscar usuário por ID existente
     ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${_ID}
     Set Global Variable    ${RESPOSTA}
 Quando realizar a requisição da rota para buscar usuário por ID inexistente
     ${RESPOSTA}    GET On Session    serverestAPI    usuarios/${PARAMS_ID_USUARIO_INEXISTENTE}    expected_status=400
+    Set Global Variable    ${RESPOSTA}
+
+Quando realizar a requisição da rota para excluir um usuário existente
+    ${RESPOSTA}    DELETE On Session    serverestAPI    usuarios/${_ID}
+    Set Global Variable    ${RESPOSTA}
+
+Quando realizar a requisição da rota para excluir um usuário inexistente
+    ${RESPOSTA}    DELETE On Session    serverestAPI    usuarios/${PARAMS_ID_USUARIO_INEXISTENTE}
     Set Global Variable    ${RESPOSTA}
