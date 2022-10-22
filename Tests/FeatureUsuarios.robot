@@ -77,3 +77,9 @@ CN0008-Buscar usuário com ID inexistente
     Dado o endpoint da API
     Quando realizar a requisição da rota para buscar usuário por ID inexistente
     Então deve retorna uma mensagem Usuário não encontrado
+
+CN0009-Excluir usuário existente
+    [Tags]    excluir_Usuario
+    Dado o endpoint da API
+    Quando realizar a requisição da rota para excluir um usuário existente
+    Então deve retornar a mensagem Registro excluído com sucesso
