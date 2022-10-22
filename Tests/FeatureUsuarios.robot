@@ -83,3 +83,9 @@ CN0009-Excluir usuário existente
     Dado o endpoint da API
     Quando realizar a requisição da rota para excluir um usuário existente
     Então deve retornar a mensagem Registro excluído com sucesso
+
+CN0010-Tentativa de exclusão de usuário inexistente
+    [Tags]    excluir_Usuario_Inexistente
+    Dado o endpoint da API
+    Quando realizar a requisição da rota para excluir um usuário inexistente
+    Então deve retornar a mensagem Nenhum registro excluído
