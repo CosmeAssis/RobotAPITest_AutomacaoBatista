@@ -3,7 +3,7 @@ Library    FakerLibrary    locale=pt_BR
 Library    String
 Library    Collections
 Library    OperatingSystem
-Resource   ../TestAPI_ResourceBase.robot
+Resource   ../Main.robot
 
 *** Variables ***
 ${RESPONSE_CADASTRO_SUCESSO}        Cadastro realizado com sucesso
